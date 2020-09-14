@@ -1,5 +1,5 @@
 public class Mommifier {
-    public Boolean Proportion(String str1) {
+    public Boolean Proportion_judgment(String str1) {
         Integer size = str1.length();
         Integer count = 0;
         for (int i = 0; i < size; i++) {
@@ -11,5 +11,13 @@ public class Mommifier {
 
         return (proportion >= 30? true : false);
 
+    }
+
+
+    public String string_mommifier(String str) {
+        if (!Proportion_judgment(str)){
+            return str;
+        }
+        return null;
     }
 }
