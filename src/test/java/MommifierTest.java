@@ -9,7 +9,7 @@ public class MommifierTest {
 
         String str = "aaaeeiiffdooorqwelluu";
 
-        Boolean bln = mommifier.Proportion_judgment(str);
+        Boolean bln = mommifier.proportion_judgment(str);
 
         assertEquals(true,bln);
     }
@@ -19,7 +19,7 @@ public class MommifierTest {
 
         String str = "aaallytmnncxzjghasdhf";
 
-        Boolean bln = mommifier.Proportion_judgment(str);
+        Boolean bln = mommifier.proportion_judgment(str);
 
         assertEquals(false,bln);
     }
@@ -33,6 +33,17 @@ public class MommifierTest {
         String result = mommifier.string_mommifier(str);
 
         assertEquals("aaallytmnncxzjghasdhf",result);
+    }
+
+    @Test
+    void should_return_new_String_when_proportion_vowels_greater_than_thirty_percent(){
+        Mommifier mommifier = new Mommifier();
+
+        String str = "aaallpegicolouaeill";
+
+        String result = mommifier.string_mommifier(str);
+
+        assertEquals("amommyamommyallpegicolomommyumommyamommyemommyill",result);
     }
 
 }
