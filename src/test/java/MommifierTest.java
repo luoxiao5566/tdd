@@ -13,7 +13,16 @@ public class MommifierTest {
 
         assertEquals(true,bln);
     }
+    @Test
+    void should_return_true_when_proportion_vowels_less_than_thirty_percent(){
+        Mommifier mommifier = new Mommifier();
 
+        String str1 = "aaallytmnncxzjghasdhf";
+
+        Boolean bln = mommifier.Proportion(str1);
+
+        assertEquals(false,bln);
+    }
 
 
 
